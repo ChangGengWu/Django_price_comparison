@@ -1,0 +1,25 @@
+=======Start============================================
+#安裝django
+pip install django==3.0.3
+#建立Project
+django-admin startproject mysite
+#建立App
+python manage.py startapp polls
+python manage.py runserver
+=======Model============================================
+Change your models (in models.py).
+#告訴 Django 模型有所變動
+python manage.py makemigrations 
+#將那些更改應用到數據庫
+python manage.py migrate
+=======View============================================
+render(request,"polls/index.html",context)
+=======Admin============================================
+python manage.py createsuperuser 產生超級使用者
+
+
+
+" '-' 號 代表相反 (reverse)"
+latest_question_list = Question.objects.order_by('-pub_date')[:5]
+
+pluralize 自動負數+s
